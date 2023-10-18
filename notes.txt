@@ -1,0 +1,24 @@
+1.1
+Can`t change the const values.
+1.2
+Don`t use var due to block and functional scope issues,always use const and let for variable assigning.
+You can assign variable without using const,let or var but it is a bad practice.
+let doesn`t allow to change value whereas var lets you to change.   
+If you want to show all thew values of the variables assigned use console.table([use the variable name])
+If you just declare/create a variable and don`t assign any value to it,still it`ll consume the memory space and give output as undefined.
+Refer mdn documentation for postfix and prefix increments.
+js ignores which datatype is being compared to,ex:Str to Number.
+1.3
+Writing into an HTML element, using innerHTML.
+Writing into the HTML output using document.write().
+Writing into an alert box, using window.alert().
+Writing into the browser console, using console.log().
+The only exception is that you can call the window.print() method in the browser to print the content of the current window.
+The statements are executed, one by one, in the same order as they are written.
+A JavaScript name must begin with:
+
+A letter (A-Z or a-z)
+A dollar sign ($)
+Or an underscore (_)
+JavaScript is Case Sensitive.
+Hyphens are not allowed in JavaScript. They are reserved for subtractions.

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('./images/ultra-instinct-son-goku\ .jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex justify-end">
+        <button id="changeBackgroundButton" class="bg-[cyan] text-[20px] rounded-lg p-2">Change Background</button>
+    </div>
+    <script>
+        const changeBackgroundButton = document.getElementById('changeBackgroundButton');
+        const body = document.body;
+
+        const newBackgroundImage = './images/goku_rage.gif';
+
+        changeBackgroundButton.addEventListener('click', () => {
+            body.style.backgroundImage = `url('${newBackgroundImage}')`;
+        });
+    </script>
+</body>
+</html>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+   
