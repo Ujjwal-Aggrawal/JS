@@ -1,6 +1,6 @@
-1.1
-Can`t change the const values.
-1.2
+[1.1]
+
+
 Don`t use var due to block and functional scope issues,always use const and let for variable assigning.
 You can assign variable without using const,let or var but it is a bad practice.
 let doesn`t allow to change value whereas var lets you to change.   
@@ -8,7 +8,9 @@ If you want to show all thew values of the variables assigned use console.table(
 If you just declare/create a variable and don`t assign any value to it,still it`ll consume the memory space and give output as undefined.
 Refer mdn documentation for postfix and prefix increments.
 js ignores which datatype is being compared to,ex:Str to Number.
-1.3
+[1.2]
+
+
 Writing into an HTML element, using innerHTML.
 Writing into the HTML output using document.write().
 Writing into an alert box, using window.alert().
@@ -22,3 +24,172 @@ A dollar sign ($)
 Or an underscore (_)
 JavaScript is Case Sensitive.
 Hyphens are not allowed in JavaScript. They are reserved for subtractions.
+Variables defined with let cannot be Redeclared
+Variables defined with let must be Declared before use
+Variables defined with let have Block Scope.
+When using const you can change the value(array) but you can`t reassign the values
+Variables declared within a JavaScript function, become LOCAL to the function.
+Local variables can only be accessed from within the function.
+Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.
+Local variables are created when a function starts, and deleted when the function is completed.
+[1.3]
+
+
+Accessing Object Properties
+
+objectName.propertyName
+          or
+objectName["propertyName"]
+
+When a JavaScript variable is declared with the keyword "new", the variable is created as an object.
+\'	'	Single quote
+\"	"	Double quote
+\\	\	Backslash
+\b	Backspace
+\f	Form Feed
+\n	New Line
+\r	Carriage Return
+\t	Horizontal Tabulator
+\v	Vertical Tabulator
+You can also break up a code line within a text string with a single backslash
+The new keyword complicates the code and slows down execution speed.
+New keyword creates objects.
+
+[1.4]
+string methods
+
+str.length()
+str.slice(strt pt,end pt)
+str.substring(strt pt,end pt) it doesn`t take negative values,it treats it as 0.
+str.substr(strt pt, length )  [refer w3schools]
+By default, the replace() method replaces only the first match. syntax[str.reaplce()]
+    to avoid case sensitiveness use /str to be replaced/i.
+    to replace globally from a particular sentence use /str to be replaced/g.
+    we can us gi for global + case insesitiveness.
+RepalceAll() : str.replaceall()
+str.toUppercase() 
+str.toLowercase()
+Strings are immutable: Strings cannot be changed, only replaced.
+str.trim() : removes space from both ends.
+    trimStart() : to remove space from beginning.
+    trimEnd() : to remove space from ending.
+The padStart() method pads a string from the start.
+It pads a string with another string (multiple times) until it reaches a given length.
+str.padStart()
+The padEnd() method pads a string from the end.
+It pads a string with another string (multiple times) until it reaches a given length.
+str.padEnd()
+
+The padEnd() and padStart() method is a string method.
+To pad a number, convert the number to a string first.
+
+The charAt(0) method returns the character at a specified index (position) in a string
+The indexOf() method returns the index (position) the first occurrence of a string in a string
+The lastIndexOf() method returns the index of the last occurrence of a specified text in a string
+Both indexOf(), and lastIndexOf() return -1 if the text is not found
+Both methods accept a second parameter as the starting position for the search
+ex : text.indexOf("tiger",15)
+The lastIndexOf() methods searches backwards (from the end to the beginning), meaning: if the second parameter is 15, the search starts at position 15, and searches to the beginning of the string.
+The search() method searches a string for a string (or a regular expression) and returns the position of the match.
+search() and index() do look and work almost same but the two methods are NOT equal. These are the differences:
+
+The search() method cannot take a second start position argument.
+The indexOf() method cannot take powerful search values (regular expressions).
+
+The match() method returns an array containing the results of matching a string against a string (or a regular expression).
+Note:  do refer w3schools.
+The includes() method returns true if a string contains a specified value.
+Otherwise it returns false.
+we can add parameter too,ex: text.includes("End",12)
+start looking for End from 12th index.
+The startsWith() method returns true if a string begins with a specified value. ex:str.startsWith()
+we can add a starting pt parameter too, so that it starts to look for the specified string from that position.
+The endsWith() method returns true if a string ends with a specified value.
+
+[1.5]
+string interpolation
+
+let firstName = "John";
+let lastName = "Doe";
+
+let text = `Welcome ${firstName}, ${lastName}!`;
+${} is used to fetch values of declared & assigned variables.
+
+[1.6]
+Numbers
+JavaScript will try to convert strings to numbers in all numeric operations:
+
+let x = "100";
+let y = "10";
+let z = x / y;
+Except (+) everyother operation the strings are converted to numbers.
+NaN and infinity both are number types.
+Comparing two JavaScript objects always returns false.objects are assigned and compared by reference, not by value.
+JavaScript integers are only accurate up to 15 digits.
+
+[1.7]
+BigInt
+
+To declare a number as bigint just add 'n' at the end of the number or use BigInt(number).
+Arithmetic between a BigInt and a Number is not allowed (type conversion lose information).
+You can do all the operations on bigint like you used in numbers DT.
+A BigInt can not have decimals.
+
+[1.8]
+Number methods
+
+toString() : to convert number to a string.
+toExponential() : to convert number to a Exponential,can alse add a parameter,ex: 9.626.toExponential(2) so that it takes only 2 decimal places.
+toFixed() : it returns a STRING with the specified decimal places,ex: 9.5645.toFixed(2) = 9.56
+toPrecision() returns a string, with a number written with a specified length.
+
+To convert a variable to Number:
+Number() : used for variables
+parseInt() : used for strings and returns whole number.
+parseFloat() :  used for strings and returns number.
+
+Those which can`t be converted are defined as NaN
+
+Method	                        Description
+Number.isInteger()	            Returns true if the argument is an integer
+Number.isSafeInteger()	        Returns true if the argument is a safe integer
+Number.parseFloat()	            Converts a string to a number (spaces are allowed.)
+Number.parseInt()	            Converts a string to a whole number (spaces are allowed.)
+The number methods above belong to the JavaScript Number Object.
+
+Number Properties
+https://www.w3schools.com/js/js_number_properties.asp
+
+[1.9]
+
+JS ARRAYS
+Typeof arrays is : object.
+Can access array elements by using indexes array[index].
+Can change the existing elements of array thru array[indice].
+Change a array to a string array.toString().
+
+
+[1.10]
+
+Array Methods
+
+array.length() : returns the length of the array.
+array.push() : add new elements at the end of the array.
+            Or
+array[array.length] = "desired element name" : thru this too we can add element in array.(index concept).
+Adding elements with high indexes can create undefined "holes" in an array: ex-
+
+const fruits = ["Banana", "Orange", "Apple"];
+fruits[6] = "Lemon";  // Creates undefined "holes" in fruits
+
+array[3,4,5] will be undefined.
+In JavaScript, arrays use numbered indexes.  
+In JavaScript, objects use named indexes.
+
+Avoid using new Array() to create arrays as it can give unexpected results,ex : it doesn`t create a single element array.
+As JS recognized Array as object,so we can use Array.isArray() to check if it`s an array.
+The instanceof operator returns true if an object is created by a given constructor. syntax: fruits instanceof Array.
+
+Array.join("*") ; it works same as Array.toString(){it converts an array to a string but with a specific parameter}.
+Array.pop() : removes the last element from the array.
+Array.shift() : Shifting is equivalent to popping, but working on the first element instead of the last.
