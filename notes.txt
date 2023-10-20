@@ -193,3 +193,99 @@ The instanceof operator returns true if an object is created by a given construc
 Array.join("*") ; it works same as Array.toString(){it converts an array to a string but with a specific parameter}.
 Array.pop() : removes the last element from the array.
 Array.shift() : Shifting is equivalent to popping, but working on the first element instead of the last.
+Array.unshift() : this will add the element at the beginning of the array.
+delete method is used to delete specific array elements using indices but for deleting entire array set array.length = 0 or array = [].
+array1.concat(array2) to concat arrays.  The concat() method does not change the existing arrays. It always returns a new array.The concat() method can also take strings as arguments.
+The splice() method can be used to add new items to an array.
+    syntax : const fruits = ["Banana", "Orange", "Apple", "Mango"];
+             fruits.splice(2, 0, "Lemon", "Kiwi");
+
+        In the code above "2" is the index at which the new elements are to be added, "0" is to not delete the element.
+splice() can be used to delete elements too,ex : 
+             const fruits = ["Banana", "Orange", "Apple", "Mango"];
+             fruits.splice(0, 1);
+
+array.slice() : regular slicing method.
+array.sort() : used to sort an array in ascending order.
+array.reverse() : used to sort an array in descending order.
+
+
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+
+we can use this for nunbers as sort() is used for alphabhets.
+The Fisher Yates Method (refer w3schools)
+
+Math.max.apply(null,array) : used to find the largest value from an array.Use this as a function in code.
+            function myArrayMax(arr) {
+                return Math.max.apply(null, arr);
+            }
+same goes for min Math.min.apply(null,array). 
+null is used as "This" keyword of function.
+
+Don`t use sort() on object(key:value pairs) rather use on arrays. Or else use with compare function.
+Refer w3schools for further sorting options https://w3schools.com/js/js_array_sort.asp
+
+[1.11] Looping
+
+forEach() : used to call a function for each element of an array. Syntax : array.forEach(function(value, index , array))
+
+        value : this is just a random name.
+        index : to return the index of the elements of array.
+        arr : our array.
+forEach() doesn`t return a new array, it modifies existing array.
+
+map() method
+array1 = []
+array2 = array1.map(myFunction)
+function myFunction(value, index , array)
+return value
+map() method returns a new array.
+
+flatMap() method : used to flatten the array. Even this method takes callback function.
+
+filter() method : used to filter out and create a new array based on the condition. syntax: same as forEach() just assign it to a new array.
+
+reduce() method : used to produce(reduce) an array to a single array.refer https://www.youtube.com/watch?v=b9zgRt4p9Zo.
+syntax : same as forEach(), but here we have a new parameter "accumulator"(to store the values) and reduce() can also have a initial value.
+
+every() method : used to check if all the elements in an array satisfy the given condition. same syntax as forEach
+
+some() method : used to check if some elements pass the condition. same syntax as forEach.
+indexOf() : returns the index of the element in the array. syntax array.indexOf("the element name", start searching for the element from the specified index).if the element isn`t found it returns -1.
+lastName() : returns the index of the element in the array accd to the last occurrence.
+
+find() : used to find and return the element which statisfies the condition. same syntax as forEach.{for finding all the elements psasing the condition use filter()}
+findIndex() returns the index of the element which satisfied the condition.
+
+array.keys() and array.entries() returns the indexes(keys) and index and element(key,value pair[note it is in same format]).
+.includes("element name") : used to clarify if the specified element is there in an array.
+
+
+[1.12]
+
+array const conditions:
+
+const cars;
+cars = ["Saab", "Volvo", "BMW"]; // This won`t work with using const keyword
+
+cars = ["Saab", "Volvo", "BMW"];
+var cars;  // this will work as we are using var.
+const n let has block scope.
+var doesn`t have block scope.
+
+[1.13]
+
+JS Dates
+
+
+
+
+
+
+
+
+
+
+
+
